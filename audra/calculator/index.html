@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kalkulator</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f9f9f9;
+				margin: 0;
+				padding: 20px;
+				display: flex;
+				justify-content: center;
+			}
+
+			.wrapper {
+				width: 100%;
+				max-width: 800px;
+			}
+
+			.container {
+				background: white;
+				padding: 20px;
+				margin-bottom: 20px;
+				border-radius: 10px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			}
+
+			h1 {
+				font-size: 22px;
+				color: #333;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+
+			p {
+				font-size: 14px;
+				color: #555;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+
+			input, select, button {
+				width: 100%;
+				padding: 12px;
+				margin: 8px 0;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				font-size: 16px;
+				box-sizing: border-box;
+			}
+
+			button {
+				background: #007BFF;
+				color: white;
+				cursor: pointer;
+				transition: background 0.3s ease;
+				border: none;
+				font-weight: bold;
+			}
+
+			button:hover {
+				background: #0056b3;
+			}
+
+			#hasil, #hasilluas, #hasilvolume {
+				margin-top: 10px;
+				font-weight: bold;
+				color: #222;
+				background: #f1f1f1;
+				padding: 12px;
+				border-radius: 5px;
+				text-align: center;
+			}
+
+			hr {
+				border: none;
+				border-top: 2px solid #eee;
+				margin: 20px 0;
+			}
+
+			/* RESPONSIVE */
+			@media (max-width: 600px) {
+				body {
+					padding: 10px;
+				}
+
+				.container {
+					padding: 15px;
+				}
+
+				h1 {
+					font-size: 18px;
+				}
+
+				input, select, button {
+					font-size: 14px;
+					padding: 10px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<h1>operator dasar</h1>
+				<p>website untuk membantu kamu menghitung menggunakan operator dasar</p>
+				<input id="angkapertama"type="number"placeholder="masukan angka pertama"> 
+				<input id="angkakedua"type="number"placeholder="masukan angka kedua">
+				<select id="operator">
+					<option>pertambahan</option>
+					<option>perkalian</option>
+					<option>pengurangan</option>
+					<option>pembagian</option>
+				</select>
+				<button onclick="mainfunction()">click disini</button>
+				<p id="hasil">hasil akan muncul disini</p>
+			</div>
+			<hr>
+			<div class="container">
+				<h1>luas</h1>
+				<p>website untuk membantu menghitung luas bangun datar</p>
+				<input id="numbersatu"type="number"placeholder="masukan angka pertama">
+				<input id="numberdua"type="number"placeholder="masukan angka kedua">
+				<select id="bangundatar">
+					<option>persegi</option>
+					<option>persegi panjang</option>
+					<option>segitiga</option>
+					<option>trapesium</option>
+					<option>layang-layang</option>
+					<option>bujur sangkar</option>
+				</select>
+				<button onclick="luas()">click disini</button>
+				<p id="hasilluas">hasil akan muncul disini</p>
+			</div>
+			<hr>
+			<div class="container">
+				<h1>volume</h1>
+				<p>website untuk menghitung volume bangun ruang</p>
+				<input id="numberone"type="number"placeholder="masukan angka pertama">
+				<input id="numbertwo"type="number"placeholder="masukan angka kedua">
+				<select id="bangunruang">
+					<option>kubus</option>
+					<option>balok</option>
+					<option>kerucut</option>
+					<option>tabung</option>
+					<option>bola</option>
+				</select>
+				<button onclick="">click disini</button>
+				<p id="hasilvolume">hasil akan muncul disini</p>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+/* Style dasar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Judul */
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input & tombol */
+input[type="text"] {
+  padding: 12px;
+  font-size: 16px;
+  width: 250px;
+  max-width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+button {
+	margin-top: 30px;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+ul li {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tombol hapus di list */
+ul li button {
+  background-color: #FF4C4C;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+ul li button:hover {
+  background-color: #cc0000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul li button {
+    margin-top: 8px;
+  }
+}

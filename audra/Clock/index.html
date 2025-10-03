@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>clock web</h1>
+    <div id="clock">00:00:00</div>
+    <div class="section">
+      <h3>stopwatch</h3>
+      <div id="stopwatch">00:00:00</div>
+      <button onclick="startstopwatch()" id="start">start</button>
+      <button onclick="stopstopwatch()"id="stop">stop</button>
+      <button onclick="resetstopwatch()"id="restart">restart</button>
+    </div>
+    <div class="section">
+      <h3>alarm</h3>
+      <input type="time">
+      <button id="setalarm">set alarm</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

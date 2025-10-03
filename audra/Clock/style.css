@@ -1,0 +1,47 @@
+
+p {
+  color: black;
+}
+h1 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Google Sans Code", monospace;
+}
+div {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Delius Unicase", cursive;
+}
+h3 {
+  text-transform: capitalize;
+  font-family: "Google Sans Code", monospace;
+}
+.section {
+  background-color: #cee0e8;
+  padding: 20px;
+}
+#stopwatch {
+  margin-bottom: 20px;
+}
+button {
+  padding: 10px;
+  text-transform: capitalize;
+  border: none;
+}
+#start {
+  background-color: green;
+  color: cornsilk;
+}
+#stop {
+  background-color: red;
+  color: cornsilk
+}
+#restart {
+  background-color: yellow;
+  color: #725c01;
+}
+#setalarm {
+  background-color: deepskyblue;
+  color: cornsilk;
+}
