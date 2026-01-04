@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clock</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="section">
+		<div id="clock">7:00:00</div>
+	</div>
+	<div class="section">
+		<div id="stopwatch">00:00:00</div>
+		<div class="button">
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+			<button id="reset">Reset</button>
+		</div>
+	</div>
+	<script>
+function clock(){
+	const now=new Date()
+	let hour=now.getHours()
+	let minute=now.getMinutes()
+	let second=now.getSeconds()
+	let form=""
+	let time = hour+" : "+minute+" : "+second
+	console.log(time)
+	if(hour>12)
+	{
+		form="PM"
+	}else{
+		form="AM"
+	}
+	hour = hour%12
+	if(hour==0){
+		hour=12
+	}
+	if(hour<10){
+		hour="0"+hour
+	}
+	if(minute<10){
+		minute="0"+minute
+	}
+	if(second<10){
+		second="0"+second
+	}
+	const jam = document.querySelector("#clock")
+	jam.innerHTML=time
+}
+setInterval(clock,1000)
+
+const stopwatch=document.querySelector("#stopwatch")
+const start=document.querySelector("#start")
+const stop=document.querySelector("#stop")
+const reset=document.querySelector("#reset")
+let menit=0
+let detik=0
+let milidetik=0
+let stopwatch_run                                               
+
+start.addEventListener("click",function(){
+	stopwatch_run=setInterval(()=>{
+		milidetik++
+	if(milidetik==100){
+		milidetik=0
+		detik++
+	}
+	if(detik==60){
+		detik=0
+		menit++
+	}
+	stopwatch.innerHTML=menit+" : "+detik+" : "+milidetik
+	},10)
+})
+	</script>
+</body>
+</html>

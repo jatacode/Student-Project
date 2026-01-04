@@ -1,0 +1,131 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container Produk */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Kartu Produk */
+.product {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Agar gambar sepatu/jam tidak terpotong */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.product p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Tombol Masukkan ke Keranjang */
+button {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Container Keranjang */
+.cart-container {
+    grid-column: 1 / -1; /* Membuat keranjang melebar di bawah produk */
+    background: #fff;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-left: 6px solid #27ae60;
+}
+
+.cart-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+#cart-item {
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+/* Styling untuk list item di dalam keranjang (diatur via JS) */
+.cart-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+#total {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: right;
+    color: #27ae60;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .container { grid-template-columns: 1fr; }
+}

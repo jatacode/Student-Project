@@ -1,0 +1,171 @@
+    /* Reset & Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #f4f7f6;
+        color: #333;
+    }
+
+    /* Navigation */
+    nav {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: #555;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 0 20px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #0362fc;
+    }
+
+    /* Banner */
+    .banner {
+        padding: 100px 20px;
+        text-align: center;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg4SOlGkXMzEaFAvqjSQM1Kq-vJFLYKl-Rvw&s);
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+    .banner h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .banner p {
+        font-size: 20px;
+        font-weight: 300;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Main Container */
+    .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    /* Product Grid */
+    .product {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .item {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .item:hover {
+        transform: translateY(-5px);
+    }
+
+    .item img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .price {
+        display: block;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+    }
+
+    .button {
+        background-color: #0362fc;
+        padding: 12px;
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: 0.3s;
+        display: block;
+    }
+
+    .button:hover {
+        background-color: #024bc4;
+        color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background-color: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        height: fit-content;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #0362fc;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar li {
+        margin-bottom: 12px;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #666;
+        transition: 0.2s;
+        display: block;
+    }
+
+    .sidebar a:hover {
+        color: #0362fc;
+        padding-left: 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .sidebar {
+            order: -1; /* Sidebar muncul di atas pada HP */
+        }
+    }

@@ -1,0 +1,156 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Agar saat klik menu, scroll terasa halus */
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #ff4757;
+}
+
+/* Section General Styling */
+section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Profile Section */
+#Profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+#Profile p {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gallery & Food Styling (Grid System) */
+#Favfood, #gallery {
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+#Favfood img, #city img, #gallery img {
+    width: 100%;
+    max-width: 450px; /* Ukuran yang lebih proporsional */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+#Favfood img:hover, #gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* City Section */
+#city {
+    background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.02));
+}
+
+#city p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ff4757;
+    font-weight: bold;
+}
+
+/* Footer Section */
+#footer {
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    text-align: left;
+    max-width: 100%;
+}
+
+#footer h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#footer img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#left p {
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+#right h1 {
+    font-size: 3rem;
+    opacity: 0.2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #Favfood img, #city img, #gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
