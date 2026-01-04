@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Shopping Cart</title>
+</head>
+<body>
+	<h1>SHOPPING WEB</h1>
+	<div class="container">
+		<!-- product 1 -->
+		<div class="product">
+			<img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/zoom/1d42d64e49f91af45d16c442eea2065e6eab9c07_xxl-1.jpg" 
+			width="150px" height="200px">
+			<p>Kemeja - Rp.150.000</p>
+			<button id="btn-kemeja">Masukkan ke keranjang</button>
+		</div>
+
+		<!-- product 2 -->
+		<div class="product">
+			<img src="https://cardinal.co.id/cdn/shop/files/LCI8G54B.01_2nw-1-scaled.jpg?v=1754446953" 
+			width="150px" height="200px">
+			<p>Celana Panjang - Rp.200.000</p>
+			<button id="btn-celana">Masukkan ke keranjang</button>
+		</div>
+
+		<!-- product 3 -->
+		<div class="product">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV4mgeVZtX-Qvy3i94Av6Nupq4wufwuR8N4g&s" 
+			width="150px" height="200px">
+			<p>Sepatu - Rp.278.000</p>
+			<button id="btn-sepatu">Masukkan ke keranjang</button>
+		</div>
+	</div>
+
+	<div class="cart-container">
+		<h2>Keranjang Saya</h2>
+		<div id="cart-items"></div>
+		<p id="total"> Total Belanja : </p>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+    /* Global Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: #555;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 0 20px;
+        transition: 0.3s;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        color: #ff6600; /* Warna aksen orange yang lebih lembut */
+    }
+
+    /* Banner */
+    .Banner {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #ff8c00, #e67e22); /* Gradient orange profesional */
+        color: white;
+        text-align: center;
+    }
+
+    .Banner h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
+    }
+
+    .Banner p {
+        font-size: 18px;
+        opacity: 0.9;
+        margin-top: 0; /* Reset margin dari kode lama */
+    }
+
+    /* Layout Container */
+    .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    /* Product Grid */
+    .product {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+
+    /* Item Card */
+    .item {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .image {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    .harga {
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    /* Button */
+    .button {
+        color: white;
+        background-color: #333;
+        padding: 12px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        background-color: #ff6600;
+        color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        height: fit-content;
+        border: 1px solid #eee;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #2c3e50;
+        border-bottom: 2px solid #ff6600;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar li {
+        margin-bottom: 12px;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #666;
+        font-size: 16px;
+        transition: 0.2s;
+        display: block;
+        padding: 5px 0;
+    }
+
+    .sidebar a:hover {
+        color: #ff6600;
+        padding-left: 5px;
+    }
+
+    /* Responsive untuk HP */
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .sidebar {
+            order: -1; /* Kategori pindah ke atas di HP */
+        }
+        .Banner h1 {
+            font-size: 28px;
+        }
+    }

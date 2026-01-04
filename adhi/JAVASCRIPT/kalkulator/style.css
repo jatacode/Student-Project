@@ -1,0 +1,125 @@
+/* Reset dan Font Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Warna latar belakang abu-abu sangat muda */
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Judul Utama */
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Garis Pemisah (HR) */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #dcdde1;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px 0;
+}
+
+/* Container / Kartu Alat Hitung */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar elemen di dalam kartu */
+}
+
+/* Styling Input dan Select */
+input[type="number"], 
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #e1e4e8;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+input[type="number"]:focus, 
+select:focus {
+    border-color: #3498db;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Styling Tombol */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Teks Hasil */
+p {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+/* Tambahan: Label untuk identifikasi hasil */
+p::before {
+    content: "Hasil: ";
+    font-weight: normal;
+    color: #7f8c8d;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+}

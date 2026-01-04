@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library | SMA Negeri 8 Denpasar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0e97c9;
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url("https://awsimages.detik.net.id/community/media/visual/2025/02/04/ilustrasi-siswa-sma_169.jpeg?w=600&q=90");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 10%;
+            color: white;
+        }
+
+        #home h1 {
+            font-family: 'Chango', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        #home h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        #home button {
+            padding: 15px 35px;
+            font-size: 18px;
+            background-color: #0e97c9;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        #home button:hover {
+            background-color: #0a7ba3;
+            transform: translateY(-3px);
+        }
+
+        /* Ekskul Section */
+        #Ekskul {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        #Ekskul h1 {
+            font-family: 'Chango', sans-serif;
+            margin-bottom: 10px;
+            color: #0e97c9;
+        }
+
+        #Ekskul .subtitle {
+            margin-bottom: 50px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            width: 280px;
+        }
+
+        .item:hover {
+            transform: translateY(-10px);
+        }
+
+        .item img {
+            width: 100%;
+            padding: 20px;
+            height: auto;
+        }
+
+        .item p {
+            background-color: #0e97c9;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Contact Section */
+        #Contact {
+            padding: 80px 10%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #Contact .logo-contact {
+            margin-bottom: 30px;
+        }
+
+        .row {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .map, form {
+            flex: 1;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0e97c9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .row { flex-direction: column; }
+            #home h1 { font-size: 2.5rem; }
+            nav .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="https://www.sman8denpasar.sch.id/portal/wp-content/uploads/2022/03/Logo-Resmi-SMA-Negeri-8-Denpasar.png" width="40px" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#Ekskul">Ekskul</a>
+            <a href="#Contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1>SMA Negeri 8 Denpasar</h1>
+        <h3>Sekolah Ramah Lingkungan</h3>
+        <button>Register Now!</button>
+    </section>
+
+    <section id="Ekskul">
+        <h1>STUDENT & EKSKUL</h1>
+        <p class="subtitle">15 Mata Pelajaran & 40 Ekstrakurikuler</p>
+        
+        <div class="cards">
+            <div class="item">
+                <img src="https://elibrary.sman8denpasar.sch.id/template/default/assets/images/8-books.png" alt="Sastra">
+                <p>KESUSASTRAAN</p> 
+            </div>
+            <div class="item">
+                <img src="https://elibrary.sman8denpasar.sch.id/template/default/assets/images/3-diploma.png" alt="Sosial">
+                <p>ILMU SOSIAL</p> 
+            </div>
+            <div class="item">
+                <img src="https://elibrary.sman8denpasar.sch.id/template/default/assets/images/6-blackboard.png" alt="Terapan">
+                <p>ILMU TERAPAN</p> 
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact">
+        <div class="logo-contact">
+            <img src="https://www.sman8denpasar.sch.id/portal/wp-content/uploads/2022/03/Logo-Resmi-SMA-Negeri-8-Denpasar.png" width="80px">
+        </div>
+        
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.5776686395786!2d115.2104874!3d-8.6365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23f9931b28535%3A0x6b445778844876b6!2sSMA%20Negeri%208%20Denpasar!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+            
+            <form action="">
+                <div class="input-group">
+                     <input type="text" placeholder="Nama Lengkap">
+                </div>
+                <div class="input-group">
+                     <input type="email" placeholder="Alamat Email">
+                </div>
+                <div class="input-group">
+                     <input type="text" placeholder="Alamat Lengkap">
+                </div>
+                <button type="submit">KIRIM PESAN</button>
+            </form>
+        </div>
+
+        <div class="footer-text">
+            <p><strong>Alamat:</strong> Jalan Dam Peraupan, Desa Peguyangan Kaja, Denpasar Utara, Bali.</p>
+            <p>Website: elibrary.sman8denpasar.sch.id | Email: sman8denpasar@gmail.com</p>
+            <p>Telp. (0361) 9008200</p>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+body{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 40px;
+}
+h1{
+	font-size: 48px;
+	font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.input-area{
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+}
+.input-area input{
+	padding: 10px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+.input-area button{
+	padding: 10px 15px;
+	background-color: #43b7c4;
+	border-radius: 5px;
+	font-weight: bold;
+	margin-left: 10px;
+	color: white;
+	transition: 0.2s;
+}
+.input-area button:hover{
+	transform: scale(1.2);
+	background-color: black;
+}
+li{
+	padding: 10px;
+	margin-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	font-family: "Chango", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+ul{
+	list-style: none;
+	width: 300px;
+}
+li {
+    background-color: #fff;
+    border: 1px solid #edf2f7;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Tombol Hapus di dalam LI */
+li button {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+li button:hover {
+    background-color: #feb2b2;
+    color: #9b2c2c;
+}
